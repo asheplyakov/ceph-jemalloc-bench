@@ -1,0 +1,14 @@
+Short description of the test
+------------------------------
+
+VM and OSDs run on the same host
+VM is attached to the public OSD network
+fio runs in the VM using rbd ioengine 
+
+ disk <- osd <- brceph
+                  |
+                tun/tap 
+------------------ -----------------
+                  |
+             fio + librbd
+

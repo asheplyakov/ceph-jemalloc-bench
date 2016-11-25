@@ -1,0 +1,28 @@
+root@vm0:/home/ubuntu# ./runfio.sh
+rbd_iodepth32: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=rbd, iodepth=32
+fio-2.2.10
+Starting 1 process
+rbd engine: RBD version: 0.1.10
+Jobs: 1 (f=1): [w(1)] [10.0% done] [0KB/1062KB/0KB /s] [0/265/0 iops] [eta 08h:57m:30s]
+rbd_iodepth32: (groupid=0, jobs=1): err= 0: pid=21242: Fri Nov 25 11:05:38 2016
+  write: io=52660MB, bw=14977KB/s, iops=3744, runt=3600394msec
+    slat (usec): min=0, max=2899, avg= 2.75, stdev= 6.11
+    clat (msec): min=1, max=6694, avg= 8.47, stdev=31.66
+     lat (msec): min=1, max=6694, avg= 8.47, stdev=31.66
+    clat percentiles (msec):
+     |  1.00th=[    5],  5.00th=[    6], 10.00th=[    7], 20.00th=[    7],
+     | 30.00th=[    7], 40.00th=[    7], 50.00th=[    8], 60.00th=[    8],
+     | 70.00th=[    8], 80.00th=[    9], 90.00th=[   12], 95.00th=[   14],
+     | 99.00th=[   17], 99.50th=[   21], 99.90th=[   80], 99.95th=[  482],
+     | 99.99th=[ 1467]
+    bw (KB  /s): min=   48, max=18079, per=100.00%, avg=15707.24, stdev=3014.62
+    lat (msec) : 2=0.01%, 4=0.11%, 10=88.16%, 20=11.23%, 50=0.39%
+    lat (msec) : 100=0.02%, 250=0.02%, 500=0.02%, 750=0.02%, 1000=0.01%
+    lat (msec) : 2000=0.02%, >=2000=0.01%
+  cpu          : usr=1.72%, sys=0.58%, ctx=894239, majf=0, minf=381
+  IO depths    : 1=0.9%, 2=3.2%, 4=10.0%, 8=25.6%, 16=55.7%, 32=4.6%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=96.7%, 8=0.1%, 16=0.1%, 32=3.2%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=13481002/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
