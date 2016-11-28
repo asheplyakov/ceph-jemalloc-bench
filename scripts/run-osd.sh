@@ -26,6 +26,9 @@ if [ -z "$drive" ]; then
 fi
 
 set -x
+ulimit -n 1048576
+ulimit -p 1048576
+ulimit -c unlimited
 systemctl stop ceph-osd@${id}.service && exec numactl \
 	--membind block:${drive##/dev/} \
 	--cpunodebind block:${drive##/dev/} -- \
