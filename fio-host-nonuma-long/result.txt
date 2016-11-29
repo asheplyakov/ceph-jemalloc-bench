@@ -1,0 +1,28 @@
+rbd_iodepth32: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=rbd, iodepth=32
+fio-2.2.10
+Starting 1 process
+rbd engine: RBD version: 0.1.10
+Jobs: 1 (f=0): [w(1)] [32.8% done] [0KB/12180KB/0KB /s] [0/3045/0 iops] [eta 16h:24m:58s]
+rbd_iodepth32: (groupid=0, jobs=1): err= 0: pid=160406: Tue Nov 29 03:05:40 2016
+  write: io=171787MB, bw=6107.2KB/s, iops=1526, runt=28800006msec
+    slat (usec): min=0, max=5281, avg= 2.09, stdev= 4.48
+    clat (usec): min=920, max=12891K, avg=20896.88, stdev=176687.44
+     lat (usec): min=925, max=12891K, avg=20898.97, stdev=176687.45
+    clat percentiles (msec):
+     |  1.00th=[    6],  5.00th=[    8], 10.00th=[    9], 20.00th=[    9],
+     | 30.00th=[   10], 40.00th=[   10], 50.00th=[   10], 60.00th=[   11],
+     | 70.00th=[   11], 80.00th=[   12], 90.00th=[   15], 95.00th=[   19],
+     | 99.00th=[   58], 99.50th=[  553], 99.90th=[ 2802], 99.95th=[ 4080],
+     | 99.99th=[ 7046]
+    bw (KB  /s): min=    5, max=13956, per=100.00%, avg=9233.09, stdev=4338.91
+    lat (usec) : 1000=0.01%
+    lat (msec) : 2=0.01%, 4=0.13%, 10=51.98%, 20=44.83%, 50=1.97%
+    lat (msec) : 100=0.29%, 250=0.13%, 500=0.13%, 750=0.14%, 1000=0.09%
+    lat (msec) : 2000=0.15%, >=2000=0.15%
+  cpu          : usr=0.55%, sys=0.04%, ctx=3102064, majf=0, minf=1336
+  IO depths    : 1=1.1%, 2=3.8%, 4=10.5%, 8=25.2%, 16=55.0%, 32=4.4%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=96.7%, 8=0.1%, 16=0.1%, 32=3.2%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=43977469/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=32
+
