@@ -1,0 +1,41 @@
+sdz: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=8
+sdy: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=8
+sdx: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=8
+sdw: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=8
+sdv: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=8
+sdu: (g=0): rw=randwrite, bs=4K-4K/4K-4K/4K-4K, ioengine=libaio, iodepth=8
+fio-2.2.10
+Starting 6 processes
+Jobs: 6 (f=6): [w(6)] [100.0% done] [0KB/9752KB/0KB /s] [0/2438/0 iops] [eta 00m:00s]
+sdz: (groupid=0, jobs=6): err= 0: pid=180499: Wed Nov 30 11:23:33 2016
+  write: io=66430MB, bw=9447.9KB/s, iops=2361, runt=7200020msec
+    slat (usec): min=1, max=1851, avg= 8.47, stdev= 6.28
+    clat (usec): min=137, max=649407, avg=20310.46, stdev=6744.16
+     lat (usec): min=143, max=649413, avg=20319.18, stdev=6743.53
+    clat percentiles (usec):
+     |  1.00th=[ 8256],  5.00th=[12224], 10.00th=[13888], 20.00th=[15680],
+     | 30.00th=[17024], 40.00th=[18048], 50.00th=[19072], 60.00th=[20608],
+     | 70.00th=[22144], 80.00th=[24448], 90.00th=[28032], 95.00th=[31616],
+     | 99.00th=[41216], 99.50th=[45824], 99.90th=[55040], 99.95th=[59648],
+     | 99.99th=[79360]
+    bw (KB  /s): min=  420, max= 4758, per=16.68%, avg=1576.00, stdev=116.35
+    lat (usec) : 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+    lat (msec) : 2=0.03%, 4=0.07%, 10=1.96%, 20=54.04%, 50=43.66%
+    lat (msec) : 100=0.22%, 250=0.01%, 500=0.01%, 750=0.01%
+  cpu          : usr=0.25%, sys=0.54%, ctx=13342716, majf=0, minf=1594
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=100.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.1%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued    : total=r=0/w=17006169/d=0, short=r=0/w=0/d=0, drop=r=0/w=0/d=0
+     latency   : target=0, window=0, percentile=100.00%, depth=8
+
+Run status group 0 (all jobs):
+  WRITE: io=66430MB, aggrb=9447KB/s, minb=9447KB/s, maxb=9447KB/s, mint=7200020msec, maxt=7200020msec
+
+Disk stats (read/write):
+  sdz: ios=38/2851926, merge=0/0, ticks=48/57538560, in_queue=57538200, util=100.00%
+  sdy: ios=30/2869530, merge=0/0, ticks=4/57537008, in_queue=57536488, util=100.00%
+  sdx: ios=0/2849684, merge=0/0, ticks=0/57539392, in_queue=57538808, util=100.00%
+  sdw: ios=0/2809202, merge=0/0, ticks=0/57542044, in_queue=57541768, util=100.00%
+  sdv: ios=30/2822113, merge=0/0, ticks=52/57543076, in_queue=57542640, util=100.00%
+  sdu: ios=30/2803469, merge=0/0, ticks=52/57544168, in_queue=57543544, util=100.00%
