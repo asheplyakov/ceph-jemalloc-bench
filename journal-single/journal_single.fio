@@ -1,0 +1,15 @@
+[global]
+bs=4k
+runtime=3600
+time_based
+write_lat_log=journal_single_lat.log
+write_iops_log=journal_single_iops.log
+write_bw_log=journal_single_bw.log
+
+[journal1]
+filename=/dev/sdf1
+rw=write
+fdatasync=1
+iodepth=1
+direct=1
+ioengine=libaio

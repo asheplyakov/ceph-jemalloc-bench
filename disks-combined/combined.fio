@@ -1,0 +1,75 @@
+[global]
+bs=4k
+runtime=7200
+time_based
+write_lat_log=combined_lat.log
+write_iops_log=combined_iops.log
+write_bw_log=combined_bw.log
+
+[journal1]
+filename=/dev/sdf1
+rw=write
+fdatasync=1
+iodepth=1
+direct=1
+ioengine=libaio
+
+[journal2]
+filename=/dev/sdf2
+rw=write
+fdatasync=1
+iodepth=1
+direct=1
+ioengine=libaio
+
+[journal3]
+filename=/dev/sdf3
+rw=write
+fdatasync=1
+iodepth=1
+direct=1
+ioengine=libaio
+
+[journal4]
+filename=/dev/sdf4
+rw=write
+fdatasync=1
+iodepth=1
+direct=1
+ioengine=libaio
+
+[sdz]
+filename=/dev/sdz1
+rw=randwrite
+fdatasync=32768 # every 128 MB, ~ every 10 sec
+
+[sdy]
+filename=/dev/sdy1
+rw=randwrite
+fdatasync=32768 # every 128 MB, ~ every 10 sec
+
+[sdx]
+filename=/dev/sdx1
+rw=randwrite
+fdatasync=32768 # every 128 MB, ~ every 10 sec
+
+[sdw]
+filename=/dev/sdw1
+rw=randwrite
+fdatasync=32768 # every 128 MB, ~ every 10 sec
+
+
+[sdv]
+filename=/dev/sdv1
+rw=randwrite
+fdatasync=32768 # every 128 MB, ~ every 10 sec
+
+[sdu]
+filename=/dev/sdu1
+rw=randwrite
+fdatasync=32768 # every 128 MB, ~ every 10 sec
+
+[sdt]
+filename=/dev/sdt1
+rw=randwrite
+fdatasync=32768 # every 128 MB, ~ every 10 sec
